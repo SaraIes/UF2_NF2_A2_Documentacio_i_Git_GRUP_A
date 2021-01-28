@@ -243,7 +243,10 @@ public class Calculadora {
 		text_resultat.setText("0");
 		text_resultat.setBounds(22, 19, 196, 21);
 
-	}
+	}/*
+		 * Serveis per per posar tots els valors a 0
+		 *
+		 */
 
 	public void inicialitza() {
 		operacio = "null";
@@ -253,19 +256,26 @@ public class Calculadora {
 		inicialitza_resultat = true;
 	}
 
+	/* Llegeix el text_resultat */
 	public String getResultatString() {
 		return text_resultat.getText();
 	}
 
+	/* convertir el numero en un quadre de text per a mostrar */
 	public void setResultatString(String s) {
 		text_resultat.setText(s);
 	}
 
+	/* llegeix el resultats en integers */
 	public int getResultatInt() {
 		String resultat = text_resultat.getText();
 		return Integer.parseInt(resultat);
 	}
 
+	/*
+	 * llegir el text que hi ha a setresultats i concatenar els diferents numeros
+	 * que l'usuari final haurà seleccionat
+	 */
 	public void afegeixNouDigit(int digit) {
 		if (inicialitza_resultat)
 			setResultatString("");
